@@ -39,9 +39,9 @@ handleError() {
 
 echo "Start invoking URL '$INVOKE_URL'"
 
-curl -vo output $INVOKE_URL || handleError
+curl -vo /tmp/output $INVOKE_URL || handleError
 
-OUTPUT=`cat output`
+OUTPUT=`cat /tmp/output`
 
 echo "Expecting '$EXPECTED_OUTPUT'"
 echo "Got output '$OUTPUT'"
